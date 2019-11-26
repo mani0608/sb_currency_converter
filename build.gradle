@@ -4,26 +4,8 @@ plugins {
 	id 'java'
 }
 
-def prodProfiles='prod'
-def devProfiles='dev'
-def testProfiles='test'
-def propertyDrivenProfiles;
-
-if (project.hasProperty('profile')) {
-	// Used for local development
-	propertyDrivenProfiles = project.property('profile')
-
-} else {
-	// Default when no profile property is specified, used for testing
-	propertyDrivenProfiles = prodProfiles
-}
-
-println 'Using profile: "' + propertyDrivenProfiles + '" for ' + project.getName()
-
 bootRun {
-	systemProperties = [
-			'spring.profiles.active': propertyDrivenProfiles
-	]
+	systemProperties System.properties
 }
 
 group = 'com.example'
