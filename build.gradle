@@ -1,0 +1,65 @@
+plugins {
+	id 'org.springframework.boot' version '2.2.1.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+	id 'java'
+	id 'war'
+}
+
+def prodProfiles='prod'
+def devProfiles='dev'
+def testProfiles='test'
+def propertyDrivenProfiles;
+
+if (project.hasProperty('profile')) {
+	// Used for local development
+	propertyDrivenProfiles = project.property('profile')
+
+} else {
+	// Default when no profile property is specified, used for testing
+	propertyDrivenProfiles = prodProfiles
+}
+
+println 'Using profile: "' + propertyDrivenProfiles + '" for ' + project.getName()
+
+bootRun {
+	systemProperties = [
+			'spring.profiles.active': propertyDrivenProfiles
+	]
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	developmentOnly
+	runtimeClasspath {
+		extendsFrom developmentOnly
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation "org.springframework.boot:spring-boot-starter-actuator"
+//	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	//implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'javax.cache:cache-api:1.1.1'
+	implementation 'org.ehcache:ehcache:3.8.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.apache.commons:commons-pool2:2.7.0'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+	testCompile 'org.junit.jupiter:junit-jupiter:5.4.0'
+}
+
+test {
+	useJUnitPlatform()
+}
