@@ -1,0 +1,361 @@
+2019-11-27 15:30:56,708 INFO com.example.currency.CurrencyConverterServerApplication [restartedMain] Starting CurrencyConverterServerApplication on LAPTOP-M5BVGATO with PID 10128 (C:\Users\mani0\workspace\nosto\release\currency_converter\sb_currency_converter\build\classes\java\main started by mani0 in C:\Users\mani0\workspace\nosto\release\currency_converter\sb_currency_converter)
+2019-11-27 15:30:56,709 DEBUG com.example.currency.CurrencyConverterServerApplication [restartedMain] Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2019-11-27 15:30:56,709 INFO com.example.currency.CurrencyConverterServerApplication [restartedMain] The following profiles are active: dev
+2019-11-27 15:30:59,263 INFO com.example.currency.CurrencyConverterServerApplication [restartedMain] Started CurrencyConverterServerApplication in 2.793 seconds (JVM running for 3.225)
+2019-11-27 15:31:42,027 INFO com.example.currency.core.CurrencyServiceImpl [http-nio-8080-exec-3] CurrencyServiceImpl.getConversionConfig - symbols: 
+2019-11-27 15:31:42,029 INFO com.example.currency.core.CurrencyServiceImpl [http-nio-8080-exec-2] CurrencyServiceImpl.getLatestRates
+2019-11-27 15:31:42,029 INFO com.example.currency.core.CurrencyServiceImpl [http-nio-8080-exec-3] CurrencyServiceImpl.getRates - query: query: {
+base: USD
+date: null
+symbols: EUR
+timePeriod: {
+{
+startAt: null 
+endAt: null
+}
+}
+2019-11-27 15:31:42,030 INFO com.example.currency.util.CurrencyHelper [http-nio-8080-exec-3] CurrencyHelper.createQuery - query: query: {
+base: USD
+date: null
+symbols: EUR
+timePeriod: {
+{
+startAt: null 
+endAt: null
+}
+}
+2019-11-27 15:31:42,030 INFO com.example.currency.util.CurrencyHelper [http-nio-8080-exec-3] CurrencyHelper.createQuery - response: ?base=USD&symbols=EUR
+2019-11-27 15:31:43,940 INFO com.example.currency.config.CacheLogger [Ehcache [_default_]-0] Cache Log: {
+key: validCodes,
+type: CREATED,
+oldValue: null,
+newValue: [AUD, BGN, BRL, CAD, CHF, CNY, CZK, DKK, EUR, GBP, HKD, HRK, HUF, IDR, ILS, INR, ISK, JPY, KRW, MXN, MYR, NOK, NZD, PHP, PLN, RON, RUB, SEK, SGD, THB, TRY, USD, ZAR]
+2019-11-27 15:31:43,944 INFO com.example.currency.core.CurrencyServiceImpl [http-nio-8080-exec-2] CurrencyServiceImpl.getLatestRates - response: currencyConverter: {
+base:EUR
+date: 2019-11-26
+Rates: [
+{{
+currencyCode: AUD
+currencyValue: 1.6251
+},
+{
+currencyCode: BGN
+currencyValue: 1.9558
+},
+{
+currencyCode: BRL
+currencyValue: 4.6915
+},
+{
+currencyCode: CAD
+currencyValue: 1.4663
+},
+{
+currencyCode: CHF
+currencyValue: 1.0993
+},
+{
+currencyCode: CNY
+currencyValue: 7.7576
+},
+{
+currencyCode: CZK
+currencyValue: 25.505
+},
+{
+currencyCode: DKK
+currencyValue: 7.472
+},
+{
+currencyCode: GBP
+currencyValue: 0.85715
+},
+{
+currencyCode: HKD
+currencyValue: 8.6256
+},
+{
+currencyCode: HRK
+currencyValue: 7.4355
+},
+{
+currencyCode: HUF
+currencyValue: 336.16
+},
+{
+currencyCode: IDR
+currencyValue: 15538.08
+},
+{
+currencyCode: ILS
+currencyValue: 3.8147
+},
+{
+currencyCode: INR
+currencyValue: 78.8165
+},
+{
+currencyCode: ISK
+currencyValue: 135.4
+},
+{
+currencyCode: JPY
+currencyValue: 120.09
+},
+{
+currencyCode: KRW
+currencyValue: 1296.87
+},
+{
+currencyCode: MXN
+currencyValue: 21.4669
+},
+{
+currencyCode: MYR
+currencyValue: 4.6097
+},
+{
+currencyCode: NOK
+currencyValue: 10.0968
+},
+{
+currencyCode: NZD
+currencyValue: 1.7165
+},
+{
+currencyCode: PHP
+currencyValue: 56.016
+},
+{
+currencyCode: PLN
+currencyValue: 4.3015
+},
+{
+currencyCode: RON
+currencyValue: 4.7766
+},
+{
+currencyCode: RUB
+currencyValue: 70.5445
+},
+{
+currencyCode: SEK
+currencyValue: 10.5808
+},
+{
+currencyCode: SGD
+currencyValue: 1.5057
+},
+{
+currencyCode: THB
+currencyValue: 33.297
+},
+{
+currencyCode: TRY
+currencyValue: 6.3255
+},
+{
+currencyCode: USD
+currencyValue: 1.102
+},
+{
+currencyCode: ZAR
+currencyValue: 16.3384
+},
+}{
+startAt: null 
+endAt: null
+}
+]}
+2019-11-27 15:31:43,949 INFO com.example.currency.config.CacheLogger [Ehcache [_default_]-0] Cache Log: {
+key: latestRates,
+type: CREATED,
+oldValue: null,
+newValue: currencyConverter: {
+base:EUR
+date: 2019-11-26
+Rates: [
+{{
+currencyCode: AUD
+currencyValue: 1.6251
+},
+{
+currencyCode: BGN
+currencyValue: 1.9558
+},
+{
+currencyCode: BRL
+currencyValue: 4.6915
+},
+{
+currencyCode: CAD
+currencyValue: 1.4663
+},
+{
+currencyCode: CHF
+currencyValue: 1.0993
+},
+{
+currencyCode: CNY
+currencyValue: 7.7576
+},
+{
+currencyCode: CZK
+currencyValue: 25.505
+},
+{
+currencyCode: DKK
+currencyValue: 7.472
+},
+{
+currencyCode: GBP
+currencyValue: 0.85715
+},
+{
+currencyCode: HKD
+currencyValue: 8.6256
+},
+{
+currencyCode: HRK
+currencyValue: 7.4355
+},
+{
+currencyCode: HUF
+currencyValue: 336.16
+},
+{
+currencyCode: IDR
+currencyValue: 15538.08
+},
+{
+currencyCode: ILS
+currencyValue: 3.8147
+},
+{
+currencyCode: INR
+currencyValue: 78.8165
+},
+{
+currencyCode: ISK
+currencyValue: 135.4
+},
+{
+currencyCode: JPY
+currencyValue: 120.09
+},
+{
+currencyCode: KRW
+currencyValue: 1296.87
+},
+{
+currencyCode: MXN
+currencyValue: 21.4669
+},
+{
+currencyCode: MYR
+currencyValue: 4.6097
+},
+{
+currencyCode: NOK
+currencyValue: 10.0968
+},
+{
+currencyCode: NZD
+currencyValue: 1.7165
+},
+{
+currencyCode: PHP
+currencyValue: 56.016
+},
+{
+currencyCode: PLN
+currencyValue: 4.3015
+},
+{
+currencyCode: RON
+currencyValue: 4.7766
+},
+{
+currencyCode: RUB
+currencyValue: 70.5445
+},
+{
+currencyCode: SEK
+currencyValue: 10.5808
+},
+{
+currencyCode: SGD
+currencyValue: 1.5057
+},
+{
+currencyCode: THB
+currencyValue: 33.297
+},
+{
+currencyCode: TRY
+currencyValue: 6.3255
+},
+{
+currencyCode: USD
+currencyValue: 1.102
+},
+{
+currencyCode: ZAR
+currencyValue: 16.3384
+},
+}{
+startAt: null 
+endAt: null
+}
+]}
+2019-11-27 15:31:43,967 INFO com.example.currency.config.ServiceTimingPostHandleAdvice [http-nio-8080-exec-1] [com.example.currency.web.CurrencyController#getAllCodes()] executeTime: 1938ms
+2019-11-27 15:31:43,970 INFO com.example.currency.config.ServiceTimingPostHandleAdvice [http-nio-8080-exec-2] [com.example.currency.web.CurrencyController#getLatestRates()] executeTime: 1952ms
+2019-11-27 15:31:43,975 INFO com.example.currency.config.ServiceTimingPostHandleAdvice [http-nio-8080-exec-5] [com.example.currency.web.CurrencyController#getAllCodes()] executeTime: 3ms
+2019-11-27 15:31:44,102 INFO com.example.currency.core.CurrencyServiceImpl [http-nio-8080-exec-3] CurrencyServiceImpl.getRateForTimePeriod - response: currencyConverter: {
+base:USD
+date: 2019-11-26
+Rates: [
+{{
+currencyCode: EUR
+currencyValue: 0.9074410163
+},
+}{
+startAt: null 
+endAt: null
+}
+]}
+2019-11-27 15:31:44,102 INFO com.example.currency.core.CurrencyServiceImpl [http-nio-8080-exec-3] CurrencyServiceImpl.getRates - query: query: {
+base: EUR
+date: null
+symbols: USD
+timePeriod: {
+{
+startAt: null 
+endAt: null
+}
+}
+2019-11-27 15:31:44,102 INFO com.example.currency.util.CurrencyHelper [http-nio-8080-exec-3] CurrencyHelper.createQuery - query: query: {
+base: EUR
+date: null
+symbols: USD
+timePeriod: {
+{
+startAt: null 
+endAt: null
+}
+}
+2019-11-27 15:31:44,102 INFO com.example.currency.util.CurrencyHelper [http-nio-8080-exec-3] CurrencyHelper.createQuery - response: ?base=EUR&symbols=USD
+2019-11-27 15:31:45,325 INFO com.example.currency.core.CurrencyServiceImpl [http-nio-8080-exec-3] CurrencyServiceImpl.getRateForTimePeriod - response: currencyConverter: {
+base:EUR
+date: 2019-11-26
+Rates: [
+{{
+currencyCode: USD
+currencyValue: 1.102
+},
+}{
+startAt: null 
+endAt: null
+}
+]}
+2019-11-27 15:31:45,327 INFO com.example.currency.config.ServiceTimingPostHandleAdvice [http-nio-8080-exec-3] [com.example.currency.web.CurrencyController#config(String)] executeTime: 3316ms
